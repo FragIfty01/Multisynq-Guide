@@ -75,7 +75,7 @@ start_synchronizer_in_screen() {
 
 info "===== Synchronizer CLI Setup Started at $(date) ====="
 
-check_os
+
 update_system
 install_npm
 install_synchronizer_cli
