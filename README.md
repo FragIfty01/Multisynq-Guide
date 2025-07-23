@@ -17,7 +17,6 @@ Automate the setup and background running of the Multisynq Synchronizer CLI on U
 - Rent VPS10 (4.95$/month)
 - Make sure to save your password
 - Connect with ssh root@<ip address given in email> on termius
-- You're in
 
 ---
 
