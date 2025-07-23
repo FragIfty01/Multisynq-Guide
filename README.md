@@ -12,10 +12,12 @@ Automate the setup and background running of the Multisynq Synchronizer CLI on U
 | **CPU CORES**   | 2                        |
 | **DISK**        | 10 GB NVMe (recommended) |
 
-**Other requirements:**
-- Ubuntu 20.04 or 22.04 (x86_64)
-- Sudo/root access
-- Internet connection
+
+## Recommended server : https://contabo.com/en/vps/
+- Rent VPS10 (4.95$/month)
+- Make sure to save your password
+- Connect with ssh root@<ip address given in email> on termius
+- You're in
 
 ---
 
