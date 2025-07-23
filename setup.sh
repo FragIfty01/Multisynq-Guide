@@ -58,6 +58,13 @@ install_screen() {
     fi
 }
 
+initialize_synchronizer() {
+    info "Initializing synchronizer configuration (synchronize init)..."
+    synchronize init | tee -a "$LOG_FILE"
+    success "synchronize init completed."
+}
+
+
 start_synchronizer_in_screen() {
     info "Starting synchronizer in a detached screen session named 'synq'..."
     # Kill any existing 'synq' session to avoid conflict
@@ -80,6 +87,7 @@ update_system
 install_npm
 install_synchronizer_cli
 install_screen
+initialize_synchronizer
 start_synchronizer_in_screen
 
 success "All steps completed successfully!"
