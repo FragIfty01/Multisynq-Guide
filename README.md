@@ -37,21 +37,11 @@ You can safely close your terminal—your node keeps running in the background!
 
 ## ⚡️ Usage
 
-1. **Clone this repository:**
-    ```bash
-    git clone https://github.com/YOUR_USERNAME/your-repo-name.git
-    cd your-repo-name
-    ```
+1. **Run the command**
 
-2. **Make the script executable:**
-    ```bash
-    chmod +x setup-synchronizer-cli.sh
-    ```
-
-3. **Run the script with sudo:**
-    ```bash
-    sudo ./setup-synchronizer-cli.sh
-    ```
+```bash
+git clone https://github.com/FragIfty01/Multisynq-Guide && cd Multisynq-Guide && chmod +x setup.sh && sudo ./setup.sh
+  ```
 
 ---
 
