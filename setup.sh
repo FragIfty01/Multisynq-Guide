@@ -48,15 +48,6 @@ install_synchronizer_cli() {
     fi
 }
 
-install_screen() {
-    if command -v screen &>/dev/null; then
-        info "screen is already installed. Skipping."
-    else
-        info "Installing screen utility..."
-        sudo apt install -y screen | tee -a "$LOG_FILE"
-        success "screen installed."
-    fi
-}
 
 initialize_synchronizer() {
     info "Initializing synchronizer configuration (synchronize init)..."
@@ -65,19 +56,10 @@ initialize_synchronizer() {
 }
 
 
-start_synchronizer_in_screen() {
-    info "Starting synchronizer in a detached screen session named 'synq'..."
-    # Kill any existing 'synq' session to avoid conflict
-    if screen -list | grep -q "\.synq"; then
-        info "An old 'synq' screen session exists. Killing it."
-        screen -S synq -X quit || true
-    fi
-    # Start a new detached screen and run synchronize start inside it
-    screen -dmS synq bash -c 'synchronize start | tee -a ~/synchronize.log'
-    success "synchronizer started in screen session 'synq'."
-    info "To attach to this session, run: screen -r synq"
-    info "To detach: Press Ctrl+A then D"
-    info "Logs are saved to ~/synchronize.log"
+start_synchronizer() {
+    info "Starting synchronizer node..."
+    synchronize start | tee -a ~/synchronize.log
+    success "synchronizer node started (see ~/synchronize.log for output)."
 }
 
 info "===== Synchronizer CLI Setup Started at $(date) ====="
@@ -86,9 +68,8 @@ info "===== Synchronizer CLI Setup Started at $(date) ====="
 update_system
 install_npm
 install_synchronizer_cli
-install_screen
 initialize_synchronizer
-start_synchronizer_in_screen
+start_synchronizer
 
 success "All steps completed successfully!"
 info "===== Synchronizer CLI Setup Ended at $(date) ====="
