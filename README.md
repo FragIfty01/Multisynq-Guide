@@ -1,1 +1,1 @@
-# Multisynq-Guide
+# One click multisynq node deployement
