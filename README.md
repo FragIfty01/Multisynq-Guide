@@ -77,6 +77,7 @@ git clone https://github.com/FragIfty01/Multisynq-Guide && cd Multisynq-Guide &&
 
 - If a `screen` session named `synq` already exists, the script will close it before starting a new one.
 - The synchronizer runs even if you log out of your server or close your terminal.
+- Current online nodes : https://map.startsynqing.com/
 
 
 
