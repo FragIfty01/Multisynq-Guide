@@ -36,17 +36,25 @@ You can safely close your terminal—your node keeps running in the background!
 
 ---
 
-## ⚡️ Usage
+## ⚡️ Installation
 
-1. **Run the command**
+1. **Open a screen**
+
+```bash
+screen -S synq
+  ```
+2. **Run the command**
 
 ```bash
 git clone https://github.com/FragIfty01/Multisynq-Guide && cd Multisynq-Guide && chmod +x setup.sh && sudo ./setup.sh
   ```
 
+3. **Follow all the prompts**
+
 ---
 
 ## 🖥️ Managing Your Synchronizer Session
+
 
 - **View your running node:**
     ```bash
@@ -54,10 +62,14 @@ git clone https://github.com/FragIfty01/Multisynq-Guide && cd Multisynq-Guide &&
     ```
 - **Detach and leave it running:**
     - Press `Ctrl+A`, then `D`
-- **View the log file anytime:**
-    ```bash
-    tail -f ~/synchronize.log
-    ```
+
+- **Check your node stats**
+     ```bash
+    synchronize web
+     ```
+  - Open the forwarded site to your node stats
+    
+
 
 ---
 
@@ -65,22 +77,7 @@ git clone https://github.com/FragIfty01/Multisynq-Guide && cd Multisynq-Guide &&
 
 - If a `screen` session named `synq` already exists, the script will close it before starting a new one.
 - The synchronizer runs even if you log out of your server or close your terminal.
-- All main actions and errors are logged in `/var/log/setup-synchronizer-cli.log`.
-- The synchronizer's runtime output is saved to `~/synchronize.log`.
-- The script only supports Ubuntu 20.04 and 22.04 for now.
 
----
 
-## 🛑 Troubleshooting
 
-- **If `synchronize start` fails inside the screen:**
-    - Check your `~/synchronize.log` for errors.
-    - Make sure your system meets the requirements.
-    - Try running the command manually in a new terminal:  
-      ```bash
-      synchronize start
-      ```
-- **If you can't attach to the screen session:**  
-  Check with:
-  ```bash
-  screen -ls
+
