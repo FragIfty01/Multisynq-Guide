@@ -16,7 +16,7 @@ Automate the setup and background running of the Multisynq Synchronizer CLI on U
 ## Recommended server : https://contabo.com/en/vps/
 - Rent VPS10 (4.95$/month)
 - Make sure to save your password
-- Connect with <ssh root@ip> on termius
+- Connect with `ssh root@ip` on termius
 
 ---
 
